@@ -2,10 +2,6 @@ body {
   margin: 0;
 }
 
-iframe {
-  display: none;
-}
-
 h1 {
   font-size: 24px;
   font-weight: 400;
@@ -16,7 +12,7 @@ p {
   font-weight: 400;
 }
 
-.container {
+.page {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
