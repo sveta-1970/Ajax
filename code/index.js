@@ -4,9 +4,11 @@ req("https://jsonplaceholder.typicode.com/comments", show);
 
 function show(data) {
   if (!Array.isArray(data)) return;
-
-  const page = document.querySelector(".page");
-  
+  const page1 = document.querySelector("#page1");
+  const page2 = document.querySelector("#page2");
+  const page3 = document.querySelector("#page3");
+  const page4 = document.querySelector("#page4");
+  const page5 = document.querySelector("#page5");
 
   data.forEach((obj, i) => {
     const pattern = `
@@ -19,15 +21,15 @@ function show(data) {
          `;
 
     if (i >= 0 && i < 100) {
-      page.insertAdjacentHTML("beforeend", pattern);
+      page1.insertAdjacentHTML("beforeend", pattern);
     } else if (i >= 100 && i < 200) {
-      page.insertAdjacentHTML("beforeend", pattern);
+      page2.insertAdjacentHTML("beforeend", pattern);
     } else if (i >= 200 && i < 300) {
-      page.insertAdjacentHTML("beforeend", pattern);
+      page3.insertAdjacentHTML("beforeend", pattern);
     } else if (i >= 300 && i < 400) {
-      page.insertAdjacentHTML("beforeend", pattern);
+      page4.insertAdjacentHTML("beforeend", pattern);
     } else if (i >= 400 && i < 500) {
-      page.insertAdjacentHTML("beforeend", pattern);
+      page5.insertAdjacentHTML("beforeend", pattern);
     }
   });
 }
