@@ -1,5 +1,4 @@
 import req from "./method.js";
-
 req("https://jsonplaceholder.typicode.com/comments", show);
 
 function show(data) {
@@ -22,7 +21,9 @@ function show(data) {
 
     if (i >= 0 && i < 100) {
       page1.insertAdjacentHTML("beforeend", pattern);
-    } else if (i >= 100 && i < 200) {
+    }
+    /*
+    else if (i >= 100 && i < 200) {
       page2.insertAdjacentHTML("beforeend", pattern);
     } else if (i >= 200 && i < 300) {
       page3.insertAdjacentHTML("beforeend", pattern);
@@ -31,5 +32,37 @@ function show(data) {
     } else if (i >= 400 && i < 500) {
       page5.insertAdjacentHTML("beforeend", pattern);
     }
+    */
+
+    let page_number = document.querySelector("pagination_button");
+    page_number.addEventListener("click", (e) => {
+      switch (e.target.id) {
+        case 1:
+          if (i >= 0 && i < 100) {
+            page1.insertAdjacentHTML("beforeend", pattern);
+          }
+          break;
+        case 2:
+          if (i >= 100 && i < 200) {
+            page2.insertAdjacentHTML("beforeend", pattern);
+          }
+          break;
+        case 3:
+          if (i >= 200 && i < 300) {
+            page3.insertAdjacentHTML("beforeend", pattern);
+          }
+          break;
+        case 4:
+          if (i >= 300 && i < 400) {
+            page4.insertAdjacentHTML("beforeend", pattern);
+          }
+          break;
+        case 5:
+          if (i >= 400 && i < 500) {
+            page5.insertAdjacentHTML("beforeend", pattern);
+          }
+          break;
+      }
+    });
   });
 }
