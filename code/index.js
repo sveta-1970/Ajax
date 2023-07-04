@@ -7,7 +7,8 @@ function show(data) {
   const page = document.querySelector(".page");
   let page_number = 0;
   page_number = document.querySelector(".pagination");
-  const active_link_1 = document.querySelector("#page_one"),
+  const links = document.querySelectorAll(".pagination_button"),
+    active_link_1 = document.querySelector("#page_one"),
     active_link_2 = document.querySelector("#page_two"),
     active_link_3 = document.querySelector("#page_three"),
     active_link_4 = document.querySelector("#page_four"),
@@ -32,6 +33,9 @@ function show(data) {
     switch (e.target.innerText) {
       case "1":
         page.innerHTML = ""; //clear previously shown objects
+        links.forEach((link) => {
+          link.classList.remove("active");
+        });
         active_link_1.classList.add("active");
         data.forEach((obj, i) => {
           const pattern = `
@@ -49,6 +53,9 @@ function show(data) {
         break;
       case "2":
         page.innerHTML = "";
+        links.forEach((link) => {
+          link.classList.remove("active");
+        });
         active_link_2.classList.add("active");
         data.forEach((obj, i) => {
           const pattern = `
@@ -66,6 +73,9 @@ function show(data) {
         break;
       case "3":
         page.innerHTML = "";
+        links.forEach((link) => {
+          link.classList.remove("active");
+        });
         active_link_3.classList.add("active");
         data.forEach((obj, i) => {
           const pattern = `
@@ -83,6 +93,9 @@ function show(data) {
         break;
       case "4":
         page.innerHTML = "";
+        links.forEach((link) => {
+          link.classList.remove("active");
+        });
         active_link_4.classList.add("active");
         data.forEach((obj, i) => {
           const pattern = `
@@ -100,6 +113,9 @@ function show(data) {
         break;
       case "5":
         page.innerHTML = "";
+        links.forEach((link) => {
+          link.classList.remove("active");
+        });
         active_link_5.classList.add("active");
         data.forEach((obj, i) => {
           const pattern = `
